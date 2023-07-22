@@ -1,0 +1,23 @@
+{
+  "name": "nodeexpress",
+  "version": "1.0.0",
+  "description": "Node Express ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tshidisobrandonkhoza/nodeExpress.git"
+  },
+  "author": "Tshidiso Brandon Khoza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tshidisobrandonkhoza/nodeExpress/issues"
+  },
+  "homepage": "https://github.com/tshidisobrandonkhoza/nodeExpress#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

@@ -3,10 +3,14 @@ const app = express();
 const http = require('http')
 const port = 3000;
 const hostname = `localhost`;
-//const port = process.env.PORT || port;
-//const www = process.env.WWW || './';
-//app.use(express.static(www));
 
+const morgan = require('morgan');
+
+//add morgan dev use
+app.use(morgan('dev'))
+
+//find in the directory + root folder
+app.use(express.static(__dirname + '/public'));
 
 //request
 app.use((req, res, next) => {
@@ -18,13 +22,8 @@ app.use((req, res, next) => {
 });
 
 
-//console.log(`serving ${www}`);
-// app.get('*', (req, res) => {
 
-//     // res.sendFile(`index.html`, { root: www });
-
-// });
 const server = http.createServer(app);
 
 
-app.listen(port,hostname, () => console.log(`listening on http://${hostname}:${port}`));
+server.listen(port, hostname, () => console.log(`listening on http://${hostname}:${port}`));
